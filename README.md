@@ -87,7 +87,7 @@ acl_init(check, forbidden)
 
 That's it. As you can see we added pretty cool logic and it is still all readable and easy to maintain.
 
-For a full example with annotated source check *[sample.py](./sample.py)* file, you can run it via:
+For a full example with annotated source check *[sample.py](https://github.com/bernii/tornado-acl/blob/master/sample.py)* file, you can run it via:
 
     python sample.py
 
@@ -99,6 +99,6 @@ Project has full unit test coverage which you can run from you shell.
     python test.py
 
 
-Got some questions or suggestions? [Mail me](mailto:bkobos+ghacl@extensa.pl) directly or use the [issue tracker](/issues).
+Got some questions or suggestions? [Mail me](mailto:bkobos+ghacl@extensa.pl) directly or use the [issue tracker](https://github.com/bernii/tornado-acl/issues).
 
 **May the Force be with you!**
