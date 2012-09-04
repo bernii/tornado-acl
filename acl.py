@@ -12,7 +12,7 @@ except ImportError:
 class AccessControlList:
     """
     Access Control List class
-    XXXX SOME MORE INFO HERE PLESE
+    Provides all the decorator logic and provides default forbidden behaviour
 
     wrap_class_methods - list of methods that should be wrapped with ACL when using acl decorator on the whole class
     """
@@ -28,7 +28,10 @@ class AccessControlList:
         raise HTTPError(403, "You are not allowed to enter this area")
 
     def _check_acl(self, method, acl_list):
-        """ Check if user has right to access the resource """
+        """
+        Check if user has right to access the resource.
+        Works both on class and function objects
+        """
         # Wrapper is used on the whole class
         if inspect.isclass(method):
             for name, c_method in inspect.getmembers(method, predicate=inspect.ismethod):
@@ -48,13 +51,13 @@ class AccessControlList:
 
     @classmethod
     def init(cls, check, forbidden=None):
-        """ """
+        """ Initialize ACL with check anf (optional) forbidden function """
         cls.instance = AccessControlList(check, forbidden)
         return cls.instance
 
     @classmethod
     def get_instance(cls):
-        """ """
+        """ Get instance of ACL class if it has been initalized (singleton) """
         if not cls.instance:
             raise Exception('AccessControlList not initialized! Use acl_init first!')
         return cls.instance

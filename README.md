@@ -91,7 +91,7 @@ For a full example with annotated source check *[sample.py](./sample.py)* file, 
 
     python sample.py
 
-Testing
+Testing ![Continuous Integration status](https://secure.travis-ci.org/bernii/tornado-acl.png)
 -------
 
 Project has full unit test coverage which you can run from you shell.

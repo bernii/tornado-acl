@@ -1,6 +1,5 @@
-from tornado.web import HTTPError
 import unittest
-from acl import acl, acl_init
+from acl import acl, acl_init, HTTPError
 
 """
 If it has no tests you can't tell if it is working... right?
