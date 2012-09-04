@@ -6,7 +6,9 @@ except ImportError:
     # Not using this with Tornado? Not a problem..
     class HTTPError(Exception):
         """ Raised when user is not allowed to use the method/class """
-        pass
+        def __init__(self, status_code, message):
+            self.status_code = status_code
+            self.message = message
 
 
 class AccessControlList:
